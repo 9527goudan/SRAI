@@ -104,9 +104,9 @@ orbbec_camera/CMakeFiles/orbbec_camera_generate_messages_cpp: /home/goudan/srbot
 
 /home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetCameraInfo.h: /home/goudan/srbot_ws-C/src/orbbec_camera/srv/GetCameraInfo.srv
+/home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
-/home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetCameraInfo.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/goudan/srbot_ws-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from orbbec_camera/GetCameraInfo.srv"
@@ -121,8 +121,8 @@ orbbec_camera/CMakeFiles/orbbec_camera_generate_messages_cpp: /home/goudan/srbot
 
 /home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetDeviceInfo.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetDeviceInfo.h: /home/goudan/srbot_ws-C/src/orbbec_camera/srv/GetDeviceInfo.srv
-/home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetDeviceInfo.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetDeviceInfo.h: /home/goudan/srbot_ws-C/src/orbbec_camera/msg/DeviceInfo.msg
+/home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetDeviceInfo.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetDeviceInfo.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetDeviceInfo.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/goudan/srbot_ws-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from orbbec_camera/GetDeviceInfo.srv"

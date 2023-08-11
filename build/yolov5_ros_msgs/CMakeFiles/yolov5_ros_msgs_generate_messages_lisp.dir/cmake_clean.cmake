@@ -1,8 +1,3 @@
-file(REMOVE_RECURSE
-  "/home/goudan/srbot_ws-C/devel/share/common-lisp/ros/yolov5_ros_msgs/msg/BoundingBox.lisp"
-  "/home/goudan/srbot_ws-C/devel/share/common-lisp/ros/yolov5_ros_msgs/msg/BoundingBoxes.lisp"
-  "CMakeFiles/yolov5_ros_msgs_generate_messages_lisp"
-)
 
 # Per-language clean rules from dependency scanning.
 foreach(lang )

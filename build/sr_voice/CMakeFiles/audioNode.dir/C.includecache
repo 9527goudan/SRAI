@@ -6,3 +6,29 @@
 
 #IncludeRegexTransform: 
 
+/home/goudan/srbot_ws-C/src/sr_voice/include/sr_voice/formats.h
+
+/home/goudan/srbot_ws-C/src/sr_voice/include/sr_voice/linuxrec.h
+formats.h
+/home/goudan/srbot_ws-C/src/sr_voice/include/sr_voice/formats.h
+
+/home/goudan/srbot_ws-C/src/sr_voice/src/audio/linuxrec.c
+stdio.h
+-
+stdlib.h
+-
+fcntl.h
+-
+alsa/asoundlib.h
+-
+signal.h
+-
+sys/stat.h
+-
+pthread.h
+-
+formats.h
+/home/goudan/srbot_ws-C/src/sr_voice/src/audio/formats.h
+linuxrec.h
+/home/goudan/srbot_ws-C/src/sr_voice/src/audio/linuxrec.h
+

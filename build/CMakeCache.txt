@@ -427,6 +427,12 @@ aikit_xtts_ifly_BINARY_DIR:STATIC=/home/goudan/srbot_ws-C/build/aikit_xtts_ifly
 //Value Computed by CMake
 aikit_xtts_ifly_SOURCE_DIR:STATIC=/home/goudan/srbot_ws-C/src/aikit_xtts_ifly
 
+//Value Computed by CMake
+bluez_BINARY_DIR:STATIC=/home/goudan/srbot_ws-C/build/bluez
+
+//Value Computed by CMake
+bluez_SOURCE_DIR:STATIC=/home/goudan/srbot_ws-C/src/bluez
+
 //The directory containing a CMake configuration file for boost_headers.
 boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0
 
@@ -450,6 +456,18 @@ cv_bridge_DIR:PATH=/opt/ros/noetic/share/cv_bridge/cmake
 
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/noetic/share/dynamic_reconfigure/cmake
+
+//Value Computed by CMake
+fr3_moveit_config_BINARY_DIR:STATIC=/home/goudan/srbot_ws-C/build/fr3_moveit_config
+
+//Value Computed by CMake
+fr3_moveit_config_SOURCE_DIR:STATIC=/home/goudan/srbot_ws-C/src/fr3_moveit_config
+
+//Value Computed by CMake
+fr3_test_BINARY_DIR:STATIC=/home/goudan/srbot_ws-C/build/fr3_test
+
+//Value Computed by CMake
+fr3_test_SOURCE_DIR:STATIC=/home/goudan/srbot_ws-C/src/fr3_test
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/noetic/share/gencpp/cmake
@@ -531,7 +549,7 @@ json_tcp_BINARY_DIR:STATIC=/home/goudan/srbot_ws-C/build/json_tcp
 json_tcp_SOURCE_DIR:STATIC=/home/goudan/srbot_ws-C/src/json_tcp
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/librostime.so
+lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/noetic/share/message_filters/cmake
@@ -839,7 +857,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=19
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=20
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

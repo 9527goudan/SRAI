@@ -53,25 +53,6 @@ CMAKE_BINARY_DIR = /home/goudan/srbot_ws-C/build
 # Include the progress variables for this target.
 include yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs.dir/progress.make
 
-yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs: /home/goudan/srbot_ws-C/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBox.js
-yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs: /home/goudan/srbot_ws-C/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBoxes.js
-
-
-/home/goudan/srbot_ws-C/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBox.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/goudan/srbot_ws-C/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBox.js: /home/goudan/srbot_ws-C/src/yolov5_ros_msgs/msg/BoundingBox.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/goudan/srbot_ws-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from yolov5_ros_msgs/BoundingBox.msg"
-	cd /home/goudan/srbot_ws-C/build/yolov5_ros_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/goudan/srbot_ws-C/src/yolov5_ros_msgs/msg/BoundingBox.msg -Iyolov5_ros_msgs:/home/goudan/srbot_ws-C/src/yolov5_ros_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p yolov5_ros_msgs -o /home/goudan/srbot_ws-C/devel/share/gennodejs/ros/yolov5_ros_msgs/msg
-
-/home/goudan/srbot_ws-C/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBoxes.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/goudan/srbot_ws-C/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBoxes.js: /home/goudan/srbot_ws-C/src/yolov5_ros_msgs/msg/BoundingBoxes.msg
-/home/goudan/srbot_ws-C/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBoxes.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/goudan/srbot_ws-C/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBoxes.js: /home/goudan/srbot_ws-C/src/yolov5_ros_msgs/msg/BoundingBox.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/goudan/srbot_ws-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from yolov5_ros_msgs/BoundingBoxes.msg"
-	cd /home/goudan/srbot_ws-C/build/yolov5_ros_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/goudan/srbot_ws-C/src/yolov5_ros_msgs/msg/BoundingBoxes.msg -Iyolov5_ros_msgs:/home/goudan/srbot_ws-C/src/yolov5_ros_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p yolov5_ros_msgs -o /home/goudan/srbot_ws-C/devel/share/gennodejs/ros/yolov5_ros_msgs/msg
-
-yolov5_ros_msgs_generate_messages_nodejs: yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs
-yolov5_ros_msgs_generate_messages_nodejs: /home/goudan/srbot_ws-C/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBox.js
-yolov5_ros_msgs_generate_messages_nodejs: /home/goudan/srbot_ws-C/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBoxes.js
 yolov5_ros_msgs_generate_messages_nodejs: yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs.dir/build.make
 
 .PHONY : yolov5_ros_msgs_generate_messages_nodejs

@@ -182,21 +182,6 @@ voice_slam_node/fast:
 	cd /home/goudan/srbot_ws-C/build && $(MAKE) -f voice_slam/CMakeFiles/voice_slam_node.dir/build.make voice_slam/CMakeFiles/voice_slam_node.dir/build
 .PHONY : voice_slam_node/fast
 
-# Convenience name for target.
-voice_slam/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/goudan/srbot_ws-C/build && $(MAKE) -f CMakeFiles/Makefile2 voice_slam/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : voice_slam/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-# Convenience name for target.
-_catkin_empty_exported_target: voice_slam/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-.PHONY : _catkin_empty_exported_target
-
-# fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/goudan/srbot_ws-C/build && $(MAKE) -f voice_slam/CMakeFiles/_catkin_empty_exported_target.dir/build.make voice_slam/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
-
 src/voice_slam.o: src/voice_slam.cpp.o
 
 .PHONY : src/voice_slam.o
@@ -238,7 +223,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... voice_slam_node"
-	@echo "... _catkin_empty_exported_target"
 	@echo "... src/voice_slam.o"
 	@echo "... src/voice_slam.i"
 	@echo "... src/voice_slam.s"

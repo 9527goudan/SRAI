@@ -657,6 +657,7 @@ orbbec_camera/CMakeFiles/orbbec_camera.dir/src/ob_camera_node_driver.cpp.o
  /opt/ros/noetic/include/ros/message_traits.h
  /opt/ros/noetic/include/ros/names.h
  /opt/ros/noetic/include/ros/node_handle.h
+ /opt/ros/noetic/include/ros/package.h
  /opt/ros/noetic/include/ros/param.h
  /opt/ros/noetic/include/ros/parameter_adapter.h
  /opt/ros/noetic/include/ros/platform.h

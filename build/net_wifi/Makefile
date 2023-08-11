@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+net_wifi/CMakeFiles/NetWiFiNode_1.dir/rule:
+	cd /home/goudan/srbot_ws-C/build && $(MAKE) -f CMakeFiles/Makefile2 net_wifi/CMakeFiles/NetWiFiNode_1.dir/rule
+.PHONY : net_wifi/CMakeFiles/NetWiFiNode_1.dir/rule
+
+# Convenience name for target.
+NetWiFiNode_1: net_wifi/CMakeFiles/NetWiFiNode_1.dir/rule
+
+.PHONY : NetWiFiNode_1
+
+# fast build rule for target.
+NetWiFiNode_1/fast:
+	cd /home/goudan/srbot_ws-C/build && $(MAKE) -f net_wifi/CMakeFiles/NetWiFiNode_1.dir/build.make net_wifi/CMakeFiles/NetWiFiNode_1.dir/build
+.PHONY : NetWiFiNode_1/fast
+
+# Convenience name for target.
 net_wifi/CMakeFiles/NetWiFiNode.dir/rule:
 	cd /home/goudan/srbot_ws-C/build && $(MAKE) -f CMakeFiles/Makefile2 net_wifi/CMakeFiles/NetWiFiNode.dir/rule
 .PHONY : net_wifi/CMakeFiles/NetWiFiNode.dir/rule
@@ -209,6 +224,33 @@ src/net_wifi.cpp.s:
 	cd /home/goudan/srbot_ws-C/build && $(MAKE) -f net_wifi/CMakeFiles/NetWiFiNode.dir/build.make net_wifi/CMakeFiles/NetWiFiNode.dir/src/net_wifi.cpp.s
 .PHONY : src/net_wifi.cpp.s
 
+src/netwifi.o: src/netwifi.cpp.o
+
+.PHONY : src/netwifi.o
+
+# target to build an object file
+src/netwifi.cpp.o:
+	cd /home/goudan/srbot_ws-C/build && $(MAKE) -f net_wifi/CMakeFiles/NetWiFiNode_1.dir/build.make net_wifi/CMakeFiles/NetWiFiNode_1.dir/src/netwifi.cpp.o
+.PHONY : src/netwifi.cpp.o
+
+src/netwifi.i: src/netwifi.cpp.i
+
+.PHONY : src/netwifi.i
+
+# target to preprocess a source file
+src/netwifi.cpp.i:
+	cd /home/goudan/srbot_ws-C/build && $(MAKE) -f net_wifi/CMakeFiles/NetWiFiNode_1.dir/build.make net_wifi/CMakeFiles/NetWiFiNode_1.dir/src/netwifi.cpp.i
+.PHONY : src/netwifi.cpp.i
+
+src/netwifi.s: src/netwifi.cpp.s
+
+.PHONY : src/netwifi.s
+
+# target to generate assembly for a file
+src/netwifi.cpp.s:
+	cd /home/goudan/srbot_ws-C/build && $(MAKE) -f net_wifi/CMakeFiles/NetWiFiNode_1.dir/build.make net_wifi/CMakeFiles/NetWiFiNode_1.dir/src/netwifi.cpp.s
+.PHONY : src/netwifi.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -220,12 +262,16 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... NetWiFiNode_1"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... NetWiFiNode"
 	@echo "... src/net_wifi.o"
 	@echo "... src/net_wifi.i"
 	@echo "... src/net_wifi.s"
+	@echo "... src/netwifi.o"
+	@echo "... src/netwifi.i"
+	@echo "... src/netwifi.s"
 .PHONY : help
 
 

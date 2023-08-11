@@ -1,7 +1,8 @@
 ﻿#include <ros/ros.h>
 #include <serial/serial.h>
-#include <random>
+#include <jsoncpp/json/json.h>
 #include <thread>
+#include <ifaddrs.h>
 
 //设置串口号及波特率，其它保持默认设置
 void BT_SerialSet(serial::Serial *Serial)
@@ -26,48 +27,134 @@ void CoutSerialSet(serial::Serial *Serial)
   std::cout<<"getTimeout : "<<Serial->getTimeout().max()<<std::endl;
 }
 
+//获取网卡名称
+void Get_NIC_Name()
+{
+  struct ifaddrs* ifaddrList = nullptr;
+  if(-1 == getifaddrs(&ifaddrList))
+  {
+    std::cerr<<"网卡名称获取失败\n";
+    return;
+  }
+  for(;ifaddrList != nullptr;ifaddrList = ifaddrList->ifa_next)
+  {
+    if(nullptr == ifaddrList->ifa_addr)
+      continue;
+    if(AF_INET == ifaddrList->ifa_addr->sa_family)
+      std::cout<<"网卡设备："<<ifaddrList->ifa_name<<std::endl;
+  }
+  freeifaddrs(ifaddrList);
+}
+
+//先扫描wifi，才能发现wifi进行连接
+void ScanningWiFi()
+{
+  FILE* fp;
+    char buffer[1024];
+    // 执行 nmcli 命令扫描WiFi
+    fp = popen("nmcli device wifi list", "r");
+    if (fp == nullptr) {
+        fprintf(stderr, "Failed to execute command.\n");
+        return ;
+    }
+    // 读取命令输出并打印扫描结果
+    while (fgets(buffer, sizeof(buffer), fp) != nullptr) {
+        // 打印单行输出，即WiFi网络信息
+        printf("%s", buffer);
+    }
+    // 关闭文件指针
+    pclose(fp);
+}
+
+void SYS_WIFI(std::string *_cmd,int *_ret,bool *FIAG)
+{
+  ScanningWiFi();
+  int ret = system(_cmd->c_str());
+  if(0 == ret || 512 == ret || 2560 == ret)
+  {
+    *FIAG = true;
+    *_ret = ret;
+  }
+}
+
+/*功能：连接wifi，超时未连接上退出
+ * param1:nmcli 连接wifi命令
+ * param2：超时时间，默认3.0秒
+ * return： -1：超时，密码错误；0：wifi连接成功；512：wifi密码为空；2560：未发现wifi（wifi名称有误）
+*/
+int ConnectToWiFi(std::string *_cmd,double _time = 3.0)
+{
+  int ret = -1;
+  bool ret_0 = false;
+  std::thread WIFI(SYS_WIFI,_cmd,&ret,&ret_0);
+  if(WIFI.joinable())
+    WIFI.detach();
+
+  double Time_0,Tim_1;
+  Tim_1 = Time_0 = ros::Time::now().toSec();
+  while (_time > (Tim_1 - Time_0))
+  {
+    Tim_1 = ros::Time::now().toSec();
+    if(ret_0)
+      break;
+    usleep(80*1000);
+  }
+  if(WIFI.joinable())
+    WIFI.join();
+  return ret;
+}
+
+/*
+ * 功能：读取串口数据，连接wifi
+ * param:打开的串口地址
+*/
 void SerialRead(serial::Serial *Serial)
 {
-  uint8_t *ReadBuff = new uint8_t[1024];
-
+  std::string ReadBuff;
   while (ros::ok())
   {
-    memset(ReadBuff,0,1024);
+    ReadBuff.clear();
     size_t ret = Serial->read(ReadBuff,1024);
-    if(0 != ret && 0xfe ==ReadBuff[0])
+    //std::cout<<"ReadBuff:"<<ReadBuff<<std::endl;
+    Serial->flushInput();
+    if(0 < ret)
     {
-      size_t OverallLength = ReadBuff[1];
-      //数据总长度与接收长度对比
-      if(ret == (OverallLength + 2))
+      Json::Value readRoot;
+      Json::Reader readBuffToJosn;
+      if(readBuffToJosn.parse(ReadBuff,readRoot))
       {
-        //数据校验
-        int8_t CheckSum = 0x00;
-        for (size_t i=0;i<=ret;i++)
-          CheckSum += ReadBuff[i];
-        if( ReadBuff[ret] == CheckSum)
+        //std::cout<<readRoot;
+        if(readRoot.isMember("WiFi") && !readRoot.isMember("Activate"))
         {
-          //提取WiFi名和密码
-
-
-        }
-        else
-        {
-          printf("数据错误...\n");
-          continue;
+          std::string SSID,PASSWORD,CMD;
+          SSID = readRoot["WiFi"]["SSID"].asString();
+          PASSWORD = readRoot["WiFi"]["PASSWORD"].asString();
+          CMD = "nmcli device wifi connect " + SSID +" password " + PASSWORD;
+          int wifi_ret = ConnectToWiFi(&CMD,6.0);
+          readRoot.clear();
+          switch (wifi_ret)
+          {
+           case 0:readRoot["Activate"] = 1;break; //成功连接wifi
+           case -1://超时即密码错误
+           case 512://无该wifi的密码
+           case 2560:readRoot["Activate"] = 0;break;//未发现该wifi
+          }
+          //反馈结果
+          Json::FastWriter JsonToString;
+          ReadBuff.clear();
+          ReadBuff = JsonToString.write(readRoot);
+          ReadBuff = "uart_blt('" + ReadBuff +"')" + '\r' + '\n';
+          Serial->write(ReadBuff);
+          /*
+           * 重启操作
+          */
         }
       }
       else
-      {
-        printf("数据段缺失...\n");
-        continue;
-      }
-
+        printf("JSON数据格式解析失败！！！\n");
     }
-    else
-      Serial->flushOutput();
+    usleep(200*1000);
   }
-
-  delete [] ReadBuff;
 }
 
 int main(int argc, char *argv[])
@@ -78,6 +165,7 @@ int main(int argc, char *argv[])
 
   BT_SerialSet(&ESP32_BT);
   CoutSerialSet(&ESP32_BT);
+  Get_NIC_Name();
   try
   {
     ESP32_BT.open();
@@ -88,49 +176,11 @@ int main(int argc, char *argv[])
     return -1;
   }
 
-  std::thread ESP32_BT_thread(SerialRead,&ESP32_BT);
-  if(ESP32_BT_thread.joinable())
-    ESP32_BT_thread.detach();
-
-  uint8_t *WitBuff = new uint8_t[1024];
   if(ESP32_BT.isOpen())
-  {
-    //获取机器人类型，是4G还是wifi
-    //**IOT : 物联网  4g/5g
-    //WiFi  : 无线局域网
-    //ENTIRE: 物联网+无线局域网
-    std::string RobotClass{};
-    ros::param::get("/NetWiFiNode/RobotClass",RobotClass="MT-NBIOT");
-    //生成（0，65536）随机数
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<unsigned long> dis(0,65536);
-    unsigned long randNumber = dis(gen);
-    RobotClass = "SRAI-" + RobotClass + "-" + std::to_string(randNumber);
+    SerialRead(&ESP32_BT);
+  else
+    ROS_ERROR("serial port error");
 
-    WitBuff[0] = 0xfe;
-    WitBuff[1] = static_cast<uint8_t>(RobotClass.size() + 2);
-    WitBuff[2] = 0xfd;
-
-    int ArrayLength = 0;
-    for (unsigned long i=0;i<=RobotClass.size();i++)
-    {
-      static int j = 3;
-      WitBuff[j] = static_cast<uint8_t>(RobotClass[i]);
-      j++;
-      ArrayLength = j;
-    }
-    //计算校验位（计算总和，保留低位）
-    for (int i=0;i < ArrayLength; i++)
-      WitBuff[ArrayLength] += WitBuff[i];
-    //开机3s后才向串口发
-    sleep(3);
-    ESP32_BT.write(WitBuff,static_cast<size_t>(ArrayLength));
-  }
   ros::spin();
-
-  delete [] WitBuff;
-  ESP32_BT_thread.join();
-
   return 0;
 }

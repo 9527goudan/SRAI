@@ -1,0 +1,8 @@
+prefix=/home/goudan/srbot_ws-C/install
+
+Name: bluez
+Description: Description of bluez
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

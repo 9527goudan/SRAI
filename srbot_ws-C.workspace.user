@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.9.2, 2023-07-06T14:11:00. -->
+<!-- Written by QtCreator 4.9.2, 2023-08-03T17:28:51. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -110,21 +110,21 @@
     <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
     <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges">
-     <value type="QString">CMAKE_PREFIX_PATH=/home/goudan/srbot_ws-C/devel:/opt/ros/noetic</value>
-     <value type="QString">LD_LIBRARY_PATH=/home/goudan/srbot_ws-C/devel/lib:/opt/ros/noetic/lib</value>
+     <value type="QString">CMAKE_PREFIX_PATH=/home/goudan/srbot_ws-C/devel:/home/goudan/srbot_ws/devel:/opt/ros/noetic</value>
+     <value type="QString">LD_LIBRARY_PATH=/home/goudan/srbot_ws-C/devel/lib:/home/goudan/srbot_ws/devel/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu</value>
      <value type="QString">PATH=/opt/ros/noetic/bin:/home/goudan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin</value>
-     <value type="QString">PKG_CONFIG_PATH=/home/goudan/srbot_ws-C/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig</value>
+     <value type="QString">PKG_CONFIG_PATH=/home/goudan/srbot_ws-C/devel/lib/pkgconfig:/home/goudan/srbot_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig</value>
      <value type="QString">PWD=/home/goudan/srbot_ws-C</value>
-     <value type="QString">PYTHONPATH=/home/goudan/srbot_ws-C/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages</value>
-     <value type="QString">ROSLISP_PACKAGE_DIRECTORIES=/home/goudan/srbot_ws-C/devel/share/common-lisp</value>
+     <value type="QString">PYTHONPATH=/home/goudan/srbot_ws-C/devel/lib/python3/dist-packages:/home/goudan/srbot_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages</value>
+     <value type="QString">ROSLISP_PACKAGE_DIRECTORIES=/home/goudan/srbot_ws-C/devel/share/common-lisp:/home/goudan/srbot_ws/devel/share/common-lisp</value>
      <value type="QString">ROS_DISTRO=noetic</value>
      <value type="QString">ROS_ETC_DIR=/opt/ros/noetic/etc/ros</value>
      <value type="QString">ROS_MASTER_URI=http://localhost:11311</value>
-     <value type="QString">ROS_PACKAGE_PATH=/home/goudan/srbot_ws-C/src:/opt/ros/noetic/share</value>
+     <value type="QString">ROS_PACKAGE_PATH=/home/goudan/srbot_ws-C/src:/home/goudan/srbot_ws/src:/opt/ros/noetic/share</value>
      <value type="QString">ROS_PYTHON_VERSION=3</value>
      <value type="QString">ROS_ROOT=/opt/ros/noetic/share/ros</value>
      <value type="QString">ROS_VERSION=1</value>
-     <value type="QString">SHLVL=268</value>
+     <value type="QString">SHLVL=576</value>
      <value type="QString">TERM=xterm</value>
      <value type="QString">_=/usr/bin/env</value>
     </valuelist>

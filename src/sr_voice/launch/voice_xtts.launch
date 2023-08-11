@@ -1,4 +1,7 @@
 ﻿<launch>
+    
+    <arg name="PATH" value="/home/goudan/srbot_ws-C/src/sr_voice" />
+    
     <node pkg="sr_voice"    type="XttsVoice_node"   name="XttsVoice_node"   output="screen">
         <!--                     通用设置                       -->
         <param name="GM_appid"   type="str"              value="6597fc2f" />            <!--appid         应用id-->
@@ -11,14 +14,14 @@
         <param name="GM6"        type="str"              value="UTF8" />                <!--text_encoding 文本编码格式-->
         <param name="GM7"        type="str"              value="16000" />               <!--sample_rate   合成音频采样率-->
         <param name="GM_filename"   type="str"           value="/xtts_sample.wav" />    <!--filename      合成音频名称-->
-        <param name="GM_filepath"   type="str"           value="/home/goudan/srbot_ws-C/src/sr_voice/bin/wav" />    <!--filepath  合成音频存放路径-->
-        <param name="GM_JsonPath"   type="str"           value="/home/goudan/srbot_ws-C/src/sr_voice/param/BeginParam.json" />    <!--GM_path  json参数文件存放路径-->
+        <param name="GM_filepath"   type="str"           value="$(arg PATH)/bin/wav" />    <!--filepath  合成音频存放路径-->
+        <param name="GM_JsonPath"   type="str"           value="$(arg PATH)/param/BeginParam.json" />    <!--GM_path  json参数文件存放路径-->
 
         <!--                     离线设置                       -->
         <param name="LOCAL0"        type="str"           value="1" />                   <!--rcn             1的中文发音-->
         <param name="LOCAL1"        type="str"           value="1" />                   <!--speed_increase  语速增强-->
         <param name="LOCAL2"       type="str"            value="0" />                   <!--effect          合成音效-->
-        <param name="LOCAL3"       type="str"            value="fo|/home/goudan/srbot_ws-C/src/sr_voice/bin/msc/res/xtts/" />    <!--tts_res_path 合成资源路径-->
+        <param name="LOCAL3"       type="str"            value="fo|$(arg PATH)/bin/msc/res/xtts/" />    <!--tts_res_path 合成资源路径-->
 
         <!--                     在线设置                       -->
         <param name="CLOUD0"       type="str"            value="0" />                  <!--background_sound 背景音-->

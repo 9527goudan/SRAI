@@ -3,6 +3,6 @@ prefix=/home/goudan/srbot_ws-C/install
 Name: yolov5_ros_msgs
 Description: Description of yolov5_ros_msgs
 Version: 1.0.0
-Cflags: -I${prefix}/include
+Cflags: 
 Libs: -L${prefix}/lib 
 Requires: 
