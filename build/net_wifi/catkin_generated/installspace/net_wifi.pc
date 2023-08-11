@@ -1,0 +1,8 @@
+prefix=/home/goudan/srbot_ws-C/install
+
+Name: net_wifi
+Description: Description of net_wifi
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

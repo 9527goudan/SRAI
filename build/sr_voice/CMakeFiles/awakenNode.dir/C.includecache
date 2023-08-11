@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/goudan/srbot_ws-C/src/sr_voice/include/sr_voice/formats.h
+
+/home/goudan/srbot_ws-C/src/sr_voice/include/sr_voice/linuxrec.h
+formats.h
+/home/goudan/srbot_ws-C/src/sr_voice/include/sr_voice/formats.h
+
+/home/goudan/srbot_ws-C/src/sr_voice/src/awaken/linuxrec.c
+stdio.h
+-
+stdlib.h
+-
+fcntl.h
+-
+alsa/asoundlib.h
+-
+signal.h
+-
+sys/stat.h
+-
+pthread.h
+-
+formats.h
+/home/goudan/srbot_ws-C/src/sr_voice/src/awaken/formats.h
+linuxrec.h
+/home/goudan/srbot_ws-C/src/sr_voice/src/awaken/linuxrec.h
+

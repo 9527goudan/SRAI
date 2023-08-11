@@ -1,0 +1,17 @@
+{
+	"CLOUD0" : "background_sound",
+	"CLOUD1" : "aue",
+	"CLOUD2" : "ttp",
+	"GM0" : "engine_type",
+	"GM1" : "voice_name",
+	"GM2" : "speed",
+	"GM3" : "volume",
+	"GM4" : "pitch",
+	"GM5" : "rdn",
+	"GM6" : "text_encoding",
+	"GM7" : "sample_rate",
+	"LOCAL0" : "rcn",
+	"LOCAL1" : "speed_increase",
+	"LOCAL2" : "effect",
+	"LOCAL3" : "tts_res_path"
+}

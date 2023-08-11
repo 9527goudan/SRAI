@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="working_audio" type="working_audio_node" name="working_audio_node" output="screen" clear_params="true">
+         <param name="audio_name" type="string"  value="sr_app/src/working_audio/audio_frequency/qingtian.mp3" />
+    </node>
+</launch>

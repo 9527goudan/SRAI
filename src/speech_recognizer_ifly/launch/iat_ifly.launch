@@ -1,0 +1,20 @@
+﻿<launch>
+     <node  pkg="speech_recognizer_ifly" type="QISR_Node" name="QISR_Node"  output="screen">
+
+     <!--                               通用设置                             -->
+     <param  name="GM0"                 type="str"              value="16000" />               <!--sample_rate   音频采样率-->
+     <param  name="GM1"                 type="str"              value="plain" />               <!--result_type   结果格式-->
+     <param  name="GM2"                 type="str"              value="utf8" />                <!--result_encoding   识别结果字符串所用编码-->
+     <param  name="GM_appid"            type="str"              value="6597fc2f" />            <!--appid         应用id-->
+     <param  name="GM_RecTime"          type="double"           value="8.0" />                 <!--识别时间 单位：秒-->
+     <param  name="GM_JsonPath"         type="str"              value="/home/goudan/srbot_ws-C/src/speech_recognizer_ifly/param/BeginParam.json" />                <!--vad_eos   允许尾部静音的最长时间-->
+
+     <!--                               在线设置                             -->
+     <param  name="CLOUD0"      type="str"              value="iat" />                 <!--sub       本次识别请求的类型-->
+     <param  name="CLOUD1"      type="str"              value="zh_cn" />               <!--language  语言-->
+     <param  name="CLOUD2"      type="str"              value="iat" />                 <!--domain  领域-->
+     <param  name="CLOUD3"      type="str"              value="mandarin" />            <!--accent  语言区域-->
+     <!--param  name="CLOUD4"      type="str"              value="speex-wb;7" /-->         <!--aue  音频编码格式和压缩等级-->
+     </node>
+</launch>
+

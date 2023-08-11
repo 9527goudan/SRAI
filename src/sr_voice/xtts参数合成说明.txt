@@ -1,0 +1,25 @@
+语音合成参数:  const char* session_begin_params
+  参数：      std::string getParam
+json对象：    Json::Value root
+for循环数：   for(int8_t i=0;;i++)
+
+ros::param::get("_NodeName/ParamName",getParam)
+session_begin_params +=(root[_key + to_string(i)].asString() + "=" +  getParam)
+
+通用参数: _key = GM;
+离线参数: _key = LOCAL;
+在线参数: _key = CLOUD;
+
+使用ros：：param + Jsoncpp 合成参数有效减少代码体量，增加代码可读性
+
+增加session_begin_params中的参数步骤：1—— .launch文件中按对应格式增加参数的值。
+                                   2—— ./param/BeginParam.json添加参数的名（name）。
+                                   3—— 修改./src/xtts/xtts_voice.cpp中std::string ParamGet()函数中for()的循环次数
+
+
+播放器安装：sudo apt-get install sox
+          sudo apt-get install libsox-fmt-all
+          
+jsoncpp库安装： sudo apt-get install libjsoncpp-dev
+
+sox用法：  play xxxx.wav  即可实现播放音频

@@ -1,0 +1,6 @@
+﻿<launch>
+    <include file="$(find sr_voice)/launch/voice_xtts.launch"/><!--语音合成-->
+    <include file="$(find speech_recognizer_ifly)/launch/iat_ifly_server.launch"/><!--语音转文字-->
+
+    <node pkg="sr_voice"    type="awakenClientNode"   name="awakenClientNode"   output="screen"/>
+</launch>

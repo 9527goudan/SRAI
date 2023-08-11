@@ -1,0 +1,314 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"generate_messages",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"/home/goudan/srbot_ws-C/build/orbbec_camera/cmake/orbbec_camera-genmsg.cmake",
+			"/opt/ros/noetic/share/genmsg/cmake/genmsg-extras.cmake",
+			"orbbec_camera/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 80,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 307,
+				"parent" : 1
+			},
+			{
+				"file" : 0,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 167,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 699,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 702,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 182,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 178,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 180,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 190,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 174,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 194,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 176,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 184,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 186,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 188,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 192,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 196,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "std_msgs_generate_messages_cpp::@4a950f3c8f6ab0aa652c"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "sensor_msgs_generate_messages_cpp::@d74983185909b9810c24"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "_orbbec_camera_generate_messages_check_deps_SetBool::@d74983185909b9810c24"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "_orbbec_camera_generate_messages_check_deps_Metadata::@d74983185909b9810c24"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "_orbbec_camera_generate_messages_check_deps_GetBool::@d74983185909b9810c24"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "_orbbec_camera_generate_messages_check_deps_GetInt32::@d74983185909b9810c24"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "_orbbec_camera_generate_messages_check_deps_DeviceInfo::@d74983185909b9810c24"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "_orbbec_camera_generate_messages_check_deps_SetInt32::@d74983185909b9810c24"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "_orbbec_camera_generate_messages_check_deps_Extrinsics::@d74983185909b9810c24"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "_orbbec_camera_generate_messages_check_deps_GetCameraInfo::@d74983185909b9810c24"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "_orbbec_camera_generate_messages_check_deps_GetCameraParams::@d74983185909b9810c24"
+		},
+		{
+			"backtrace" : 16,
+			"id" : "_orbbec_camera_generate_messages_check_deps_GetDeviceInfo::@d74983185909b9810c24"
+		},
+		{
+			"backtrace" : 17,
+			"id" : "_orbbec_camera_generate_messages_check_deps_GetString::@d74983185909b9810c24"
+		},
+		{
+			"backtrace" : 18,
+			"id" : "_orbbec_camera_generate_messages_check_deps_SetString::@d74983185909b9810c24"
+		}
+	],
+	"id" : "orbbec_camera_generate_messages_cpp::@d74983185909b9810c24",
+	"name" : "orbbec_camera_generate_messages_cpp",
+	"paths" : 
+	{
+		"build" : "orbbec_camera",
+		"source" : "orbbec_camera"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/home/goudan/srbot_ws-C/build/orbbec_camera/CMakeFiles/orbbec_camera_generate_messages_cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/goudan/srbot_ws-C/build/orbbec_camera/CMakeFiles/orbbec_camera_generate_messages_cpp.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/goudan/srbot_ws-C/devel/include/orbbec_camera/DeviceInfo.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/goudan/srbot_ws-C/devel/include/orbbec_camera/Extrinsics.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/goudan/srbot_ws-C/devel/include/orbbec_camera/Metadata.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetBool.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/goudan/srbot_ws-C/devel/include/orbbec_camera/SetBool.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetCameraInfo.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetCameraParams.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetDeviceInfo.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetInt32.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/goudan/srbot_ws-C/devel/include/orbbec_camera/GetString.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/goudan/srbot_ws-C/devel/include/orbbec_camera/SetInt32.h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/goudan/srbot_ws-C/devel/include/orbbec_camera/SetString.h.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

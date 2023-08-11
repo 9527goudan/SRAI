@@ -1,0 +1,8 @@
+prefix=/home/goudan/srbot_ws-C/install
+
+Name: split_string
+Description: Description of split_string
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

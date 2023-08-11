@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/home/goudan/srbot_ws-C/devel/include/**",
+                "/opt/ros/noetic/include/**",
+                "/home/goudan/srbot_ws-C/src/aikit_waken/include/**",
+                "/home/goudan/srbot_ws-C/src/command_word_recognition/include/**",
+                "/home/goudan/srbot_ws-C/src/ivw/include/**",
+                "/home/goudan/srbot_ws-C/src/json_tcp/include/**",
+                "/home/goudan/srbot_ws-C/src/robot_id-uuid/include/**",
+                "/home/goudan/srbot_ws-C/src/speech_test/include/**",
+                "/home/goudan/srbot_ws-C/src/sr_voice/include/**",
+                "/home/goudan/srbot_ws-c/src/sr_voice/include/sr_voice/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++14",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

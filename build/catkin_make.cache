@@ -1,0 +1,2 @@
+aikit_spark_ifly:aikit_xtts_ifly:json_tcp:net_wifi:orbbec_camera:robot_id-uuid:speech_recognizer_ifly:speech_test:split_string:sr_voice:srv:voice_slam:working_audio:yolov5_ros:yolov5_ros_msgs
+-DCATKIN_DEVEL_PREFIX=/home/goudan/srbot_ws-C/devel -DCMAKE_INSTALL_PREFIX=/home/goudan/srbot_ws-C/install -G Unix Makefiles

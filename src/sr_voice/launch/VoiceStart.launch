@@ -1,0 +1,4 @@
+﻿<launch>
+   <include file="$(find sr_voice)/launch/voice_xtts.launch"/><!--语音合成-->
+   <include file="$(find sr_voice)/launch/awaken.launch"/><!--语音唤醒/语音转文字-->
+</launch>

@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="robot_id-uuid" type="uuid_node" name="uuid_node" output="screen">
+        <param name="pathFile"   type="str"  value="/home/goudan/srbot_ws-C/src/robot_id-uuid/param/robotid.txt" />
+        <param name="RobotClass" type="str"  value="MX1" />
+        <param name="RobotID" type="str"  value="" />
+    </node>
+</launch>

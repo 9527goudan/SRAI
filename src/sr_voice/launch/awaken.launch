@@ -1,0 +1,4 @@
+﻿<launch>
+    <node pkg="sr_voice"    type="awaken2Node"   name="awaken2Node"   output="screen"/>
+    <node pkg="sr_voice"    type="IatVoice_node"   name="IatVoice_node"   output="screen"/>
+</launch>

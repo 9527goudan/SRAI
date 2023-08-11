@@ -1,0 +1,8 @@
+prefix=/home/goudan/srbot_ws-C/install
+
+Name: voice_slam
+Description: Description of voice_slam
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

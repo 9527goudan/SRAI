@@ -1,0 +1,8 @@
+prefix=/home/goudan/srbot_ws-C/devel
+
+Name: working_audio
+Description: Description of working_audio
+Version: 0.0.0
+Cflags: -I/home/goudan/srbot_ws-C/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

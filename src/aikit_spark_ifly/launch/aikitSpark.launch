@@ -1,0 +1,9 @@
+﻿<launch>
+    <node pkg="aikit_spark_ifly" type="AiKitSparkNode" name="AiKitSparkNode" output="screen">
+    <param name="appID"               type="str"                   value="68dc26a6"/>
+    <param name="apiKey"              type="str"                   value="ad4b86c7eb1ee0493f5efa1174b9dcc4"/>
+    <param name="apiSecret"           type="str"                   value="ZmYwZTRhYzYxMTA4MDJkZTFlZDY1NDZk"/>
+    <param name="UserID"              type="str"                   value="18123233228"/>
+    </node>
+
+</launch>

@@ -1,0 +1,9 @@
+{
+	"CLOUD0" : "sub",
+	"CLOUD1" : "language",
+	"CLOUD2" : "domain",
+	"CLOUD3" : "accent",
+	"GM0" : "sample_rate",
+	"GM1" : "result_type",
+	"GM2" : "result_encoding"
+}

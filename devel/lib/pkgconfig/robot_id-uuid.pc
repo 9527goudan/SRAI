@@ -1,0 +1,8 @@
+prefix=/home/goudan/srbot_ws-C/devel
+
+Name: robot_id-uuid
+Description: Description of robot_id-uuid
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

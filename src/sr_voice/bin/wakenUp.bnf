@@ -1,0 +1,11 @@
+﻿#BNF+IAT 1.0 UTF-8;
+!grammar wakenUp;
+!slot <name>;     //唤醒名
+!slot <welcome>;  
+
+!solt <statement>;
+
+!start <statement>;
+<statement>:[<welcome>]<name>;
+<welcome>:你好!id(1)|小白!id(2);
+<name>:小白；

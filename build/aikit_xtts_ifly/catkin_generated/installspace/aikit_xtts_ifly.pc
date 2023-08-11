@@ -1,0 +1,8 @@
+prefix=/home/goudan/srbot_ws-C/install
+
+Name: aikit_xtts_ifly
+Description: Description of aikit_xtts_ifly
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

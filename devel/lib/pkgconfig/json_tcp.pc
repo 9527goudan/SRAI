@@ -1,0 +1,8 @@
+prefix=/home/goudan/srbot_ws-C/devel
+
+Name: json_tcp
+Description: Description of json_tcp
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/goudan/srbot_ws-C/devel
+
+Name: sr_voice
+Description: Description of sr_voice
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
